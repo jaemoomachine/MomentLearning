@@ -5,6 +5,8 @@ import torch
 import torch.nn as nn
 import torch.nn.init as init
 
+from embed import PositionalEmbedding, TokenEmbedding, DataEmbedding
+
 """ Guo et al. (2025) Less is more: Embracing sparsity and interpolation with Esiformer for time series forecasting """
 
 class SparseLinear(nn.Module):

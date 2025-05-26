@@ -13,15 +13,15 @@ import torch.nn.functional as F
 from torch.utils.data import Dataset, DataLoader
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
-from models.Moment_TE import MomentTE
-from models.Moment_TE_NoSampling import MomentTE_NoSampling
+from models.Moment_TE import MomentTE, MomentFFN, MoME
+from models.Moment_TE_NoSampling import MomentTE_NoSampling, MomentFFN_NoSampling
 
 from baselines.Frozen_TE import FrozenTE
 from baselines.Standard_TE import StandardTE
 from baselines.Switch_TE import SwitchTE
 from baselines.Sparse_TE import SparseTE
 from utils.metrics import regression_metrics
-
+from utils.model_id import get_model_id
 
 model_dict = {
     'MomentTE' : MomentTE,

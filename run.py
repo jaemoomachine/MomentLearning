@@ -5,7 +5,7 @@ parser = argparse.ArgumentParser("Moment Learning")
 
 parser.add_argument("--no", type=int, default=1)
 parser.add_argument("--model", type=str, default='MomentTE')
-parser.add_argument("--strategy", type=str, choices=['beta','distinct'], default='distinct')
+parser.add_argument("--strategy", type=str, choices=['beta','distinct'], default='beta')
 parser.add_argument("--epoch_freeze", type=int, default=10)
 parser.add_argument("--data_name", type=str, choices=['fBM', 'Levy','fBM_Levy'], default='fBM')
 
@@ -24,7 +24,7 @@ parser.add_argument("--ff_init", type=str, choices=["normal", "uniform"], defaul
 # model-specific args
 parser.add_argument("--d_model",    type=int, default=64)
 parser.add_argument("--d_ff",       type=int, default=256)
-parser.add_argument("--nhead",      type=int, default=8)
+parser.add_argument("--nhead",      type=int, default=4)
 parser.add_argument("--dropout",    type=float, default=0.0)
 parser.add_argument("--ffn_type",   type=str, choices=["moment_ffn","mome"], default="moment_ffn")
 parser.add_argument("--L_sub",      type=int, default=2)
