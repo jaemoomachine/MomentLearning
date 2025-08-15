@@ -303,7 +303,6 @@ class MomentTE(nn.Module):
         return self.head(x[0])
 
     def partial_freeze(self):
-        # encoder.layers는 내부 ModuleList
         for lyr in self.enc:
             if hasattr(lyr, 'partial_freeze'):
                 lyr.partial_freeze()
@@ -312,4 +311,5 @@ class MomentTE(nn.Module):
         for lyr in self.enc:
             if hasattr(lyr, 'full_freeze'):
                 lyr.full_freeze()
+
 
