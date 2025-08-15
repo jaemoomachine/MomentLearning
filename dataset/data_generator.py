@@ -3,6 +3,8 @@ import numpy as np
 from scipy.stats import levy_stable
 from fbm import FBM
 
+""" Generate non-stationary stochastic time series """
+
 def generate_nonstationary_fou(total_length=10000,
                                min_seg=10, max_seg=50,
                                theta_range=(0.0, 0.0),
@@ -196,5 +198,6 @@ def generate_nonstationary_fou_mixed(
         series.append(X_seg)
         x_last = float(X_seg[-1])
         t += seg_len
+
 
     return np.concatenate(series)
