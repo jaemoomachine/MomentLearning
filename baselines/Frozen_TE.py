@@ -6,6 +6,8 @@ import copy
 
 from embed import PositionalEmbedding, TokenEmbedding, DataEmbedding
 
+""" Vanilla random projections based on data-agnoistic distributions """
+
 class FrozenFFNEncoderLayer(nn.Module):
     def __init__(
         self,
@@ -109,3 +111,4 @@ class FrozenTE(nn.Module):
             x = layer(x, src_mask=src_mask, src_key_padding_mask=src_key_padding_mask)
 
         return self.head(x[0])
+
