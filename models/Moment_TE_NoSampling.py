@@ -5,6 +5,8 @@ import math
 
 from embed import PositionalEmbedding, TokenEmbedding, DataEmbedding
 
+""" Moment learning without weight sampling """"
+
 class MomentLinear_NoSampling(nn.Module):
     def __init__(
         self,
@@ -130,3 +132,4 @@ class MomentTE_NoSampling(nn.Module):
             x = layer(x)
         last_token = x[-1]         # (B, D)
         return self.head(last_token)
+
