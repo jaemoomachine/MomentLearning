@@ -1,5 +1,5 @@
 def get_model_id(args):
-    if args.model == 'MomentTE':
+    if args.model == 'MomentTE' :
         model_id = '{}_{}_{}_{}_K{}_Lsub{}_M{}_H{}_s{}_p{}_d{}_ff{}_head{}_l{}_{}_l2{}_cos{}'.format(
                 args.no,
                 args.data_name,
@@ -104,4 +104,5 @@ def get_model_id(args):
                 args.num_layers
         )                   
                   
+
     return model_id
