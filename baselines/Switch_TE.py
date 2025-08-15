@@ -5,6 +5,8 @@ import copy
 
 from embed import PositionalEmbedding, TokenEmbedding, DataEmbedding
 
+""" Mixture-of-Experts (MoE)-based Transformer encoder """
+
 class MoEFFN(nn.Module):
     def __init__(
         self,
@@ -94,3 +96,4 @@ class SwitchTE(nn.Module):
         last_token = x[-1]         # (B, D)
         return self.head(last_token) 
     
+
