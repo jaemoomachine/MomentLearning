@@ -9,6 +9,7 @@ from embed import PositionalEmbedding, TokenEmbedding, DataEmbedding
 
 """ Guo et al. (2025) Less is more: Embracing sparsity and interpolation with Esiformer for time series forecasting """
 
+
 class SparseLinear(nn.Module):
     def __init__(
         self,
@@ -246,4 +247,5 @@ def small_world_chunker(inputs, outputs, nnz):
             error = abs(P_sum - nnz)
             itr += 1
     return P
+
 
