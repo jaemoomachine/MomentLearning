@@ -1,6 +1,7 @@
 import argparse
 from exp import main
 
+""" Run """
 parser = argparse.ArgumentParser("Moment Learning")
 
 parser.add_argument("--no", type=int, default=1)
@@ -47,4 +48,5 @@ parser.add_argument("--seed",       type=int, default=2025)
 args, _ = parser.parse_known_args()
 
 if __name__ == '__main__':
+
     main(args)
