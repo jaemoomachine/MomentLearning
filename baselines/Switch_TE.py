@@ -92,8 +92,9 @@ class SwitchTE(nn.Module):
         x = self.input_proj(x)     # (B, L, D)
         x = x.transpose(0, 1)      # (L, B, D)
         for layer in self.encoder:
-            x = layer(x)           # 반복적으로 encoder layer 적용
+            x = layer(x)          
         last_token = x[-1]         # (B, D)
         return self.head(last_token) 
     
+
 
