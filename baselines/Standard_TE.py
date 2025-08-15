@@ -3,6 +3,8 @@ import torch.nn as nn
 
 from embed import PositionalEmbedding, TokenEmbedding, DataEmbedding
 
+""" Standard fully trainable Transformer encoder (TE) """
+
 class StandardTE(nn.Module):
     def __init__(self, config):
         super().__init__()
@@ -26,3 +28,4 @@ class StandardTE(nn.Module):
         encoded = self.encoder(x)  # (L, B, D)
         last_token = encoded[-1]   # (B, D)
         return self.head(last_token)  # (B, C_out)
+
